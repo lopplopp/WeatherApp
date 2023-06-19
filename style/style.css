@@ -1,0 +1,118 @@
+body, html{
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.togger{
+    -webkit-appearance: none;
+    position: relative;
+    width:50px;
+    height: 30px;
+    border-radius:25px;
+    background-color: #ccc;
+    transition: background .3s;
+    outline:none;
+    cursor: pointer;
+}
+
+.togger::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.23rem;
+    background-color: rgb(255, 255, 255);
+    transition: left .4s;
+}
+
+.togger:checked{
+}
+
+.togger:checked::after{
+    left:70%;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.slidder{
+    display:flex;
+    align-items: center;
+}
+
+#search{
+    width: 25em;
+    font-size: 1.5em;
+    border-radius: 50px;
+    background-image: url(../img/search-bar-icon.png);
+    background-repeat:no-repeat;
+    background-position:left center;
+    background-size: 0.9em;
+    padding-left: 30px;
+}
+
+.main{
+    margin:3em;
+    display:flex;
+    justify-content: space-between;
+    margin: 5em 4em;
+}
+
+.date, .time, .wind, .humidity, .precip{
+    font-size: 2em;
+    margin: 0.5em;
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.location, .condition{
+    font-size: 3em;
+    margin: 0.5em;
+    background-color: rgba(255, 255, 255, 0.075);
+
+}
+
+.degreecontainer{
+    font-size: 1.9em;
+    background-color: rgba(255, 255, 255, 0.075);
+
+}
+
+.main.night, .forecast.night{
+    color:white;
+}
+
+.degreecontainer{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    grid-template-rows:2fr 1fr;
+}
+
+.degreecontainer div{
+    margin:0;
+    font-size:1.5em;
+}
+
+.icon{
+    grid-column:1/2;
+    grid-row:1/-1;
+}
+
+#iconImg{
+    width:100%;
+}
+
+.forecast{
+    display:flex;
+    justify-content: space-around;    
+}

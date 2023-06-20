@@ -1,6 +1,6 @@
 async function getWeatherData(location="hongkong"){
     try{
-        const data = await fetch(`http://api.weatherapi.com/v1/current.json?key=8ba64ad4c78d44d7bf475636230806&q=${location}&aqi=no`);
+        const data = await fetch(`https://api.weatherapi.com/v1/current.json?key=8ba64ad4c78d44d7bf475636230806&q=${location}&aqi=no`);
         const dataJson = await data.json();
         const weatherData = dataJson.current;
         const locationData = dataJson.location;
